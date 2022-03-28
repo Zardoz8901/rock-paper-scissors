@@ -35,8 +35,7 @@ function gameRound(playerPrompt, computerSymbol) {
         alert('Try Again!');
     }
     console.log(computerSymbol)
-    alert('player: ' +playerScore);
-    alert('computer: ' +computerScore);
+    alert('Player: ' +playerScore + ' to' + ' Computer: ' +computerScore);
     if (playerScore == 3) {
         alert('You are the winner!')
     } else if (computerScore == 3) {
