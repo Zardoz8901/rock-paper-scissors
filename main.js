@@ -8,7 +8,7 @@ function computerPlay() {
 } 
 
 function gameRound(playerPrompt, computerSymbol) {
-    playerPrompt = prompt('Rock, Paper, Scissors, Shoot!').toLowerCase();
+    playerPrompt = prompt('Rock, Paper, Scissor, Shoot!').toLowerCase();
     computerSymbol = computerPlay()
     if (playerPrompt == computerSymbol) {
         alert('Great minds think alike!');
