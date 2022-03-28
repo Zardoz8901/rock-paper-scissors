@@ -56,3 +56,5 @@ if (playerScore == 3) {
 } else if (computerScore == 3) {
     alert('You are the loser!')
 }
+
+console.log(game(gameRound))
