@@ -1,59 +1,22 @@
+// starting scores
 let computerScore = 0
 let playerScore = 0
 
-const symbolArray = ['rock','paper','scissor'];
+const resultMatrix = [-1,0,1]
 
-function computerPlay() {
-    return computerSymbol = symbolArray[Math.floor(Math.random()*symbolArray.length)]
-} 
+// player selection routed to the randomized result matrix
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click',() => {
+        playerClick = resultMatrix[Math.floor(resultMatrix.length * Math.random())];
+        playerResult =  (button.id) + " " + playerClick
+        console.log(playerResult)
+    });
+});
 
-function gameRound(playerPrompt, computerSymbol) {
-    playerPrompt = prompt('Rock, Paper, Scissor, Shoot!').toLowerCase();
-    computerSymbol = computerPlay()
-    if (playerPrompt == computerSymbol) {
-        alert('Great minds think alike!');
-        alert('Tie!');
-    } else if (playerPrompt == 'rock' && computerSymbol == 'scissor') {
-        playerScore += 1
-        alert('Rock beats Scissor!');
-    } else if (playerPrompt == 'rock' && computerSymbol == 'paper') {
-        computerScore += 1
-        alert('Paper beats Rock!');
-    } else if (playerPrompt == 'scissor' && computerSymbol == 'paper') {
-        playerScore += 1
-        alert('Scissor beats Paper!');
-    } else if (playerPrompt == 'scissor' && computerSymbol == 'rock') {
-        computerScore += 1
-        alert('Rock beats Scissor!');
-    } else if (playerPrompt == 'paper' && computerSymbol == 'rock') {
-        playerScore += 1
-        alert('Paper beats Rock!');
-    } else if (playerPrompt == 'paper' && computerSymbol == 'scissor') {
-        computerScore += 1
-        alert('Scissor beats Paper!');
-    } else {
-        alert('Try Again!');
+ /* function gameResults(playerResult) {
+    if (playerResult == 1) {
+    let    document.createElement('div')
+
     }
-    console.log(computerSymbol)
-    alert('Player: ' +playerScore + ' to' + ' Computer: ' +computerScore);
-    if (playerScore == 3) {
-        alert('You are the winner!')
-    } else if (computerScore == 3) {
-        alert('You are the loser!')
-    }
-}
-
-function game(gameRound) {
-    while (playerScore < 3 && computerScore < 3) {
-    gameRound()
-    }
-}
-
-
-if (playerScore == 3) {
-    alert('You are the winner!')
-} else if (computerScore == 3) {
-    alert('You are the loser!')
-}
-
-console.log(game(gameRound))
+}  */
