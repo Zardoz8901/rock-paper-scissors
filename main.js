@@ -2,13 +2,13 @@
 let computerScore = 0
 let playerScore = 0
 
-const resultMatrix = [-1,0,1]
+const resultArray = [-1,0,1]
 
-// player selection routed to the randomized result matrix
+// player selection routed to the randomized result array
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click',() => {
-        playerClick = resultMatrix[Math.floor(resultMatrix.length * Math.random())];
+        playerClick = resultArray[Math.floor(resultArray.length * Math.random())];
         playerResult =  (button.id) + " " + playerClick
         console.log(playerResult)
     });
